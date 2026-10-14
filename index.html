@@ -5,6 +5,16 @@
 <meta name="theme-color" content="#28372d">
 <meta name="description" content="Kriativa Essência — acessórios autorais feitos com intenção.">
 <title>Kriativa Essência — acessórios autorais</title>
+<link rel="canonical" href="https://kriativaessencia.com.br/">
+<script>
+(function () {
+  var path = window.location.pathname;
+  if (/\/index\.html$/i.test(path)) {
+    var cleanPath = path.replace(/index\.html$/i, "");
+    window.history.replaceState(null, document.title, cleanPath + window.location.search + window.location.hash);
+  }
+})();
+</script>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
