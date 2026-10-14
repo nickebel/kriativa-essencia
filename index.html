@@ -106,6 +106,34 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
   .whatsapp-float span{display:none}
 }
 
+
+/* Destaque para o Instagram no desktop e no celular */
+.instagram-nav{display:inline-flex;align-items:center;justify-content:center;padding:7px 10px;border:1px solid #d7c6b8;border-radius:999px;background:var(--paper);color:var(--green)!important;font-weight:700;white-space:nowrap}
+.instagram-nav:hover{background:#ece7dc;border-color:var(--clay)}
+.instagram-cta{background:var(--paper)!important;color:var(--green)!important;border-color:var(--clay)!important}
+.instagram-cta:hover{background:var(--clay)!important;color:#fff!important}
+.contact-actions{display:flex;justify-content:center;align-items:center;gap:12px;flex-wrap:wrap}
+.instagram-contact{background:transparent!important;color:#f7f3eb!important;border-color:#d7c6b8!important}
+.instagram-contact:hover{background:var(--clay)!important;color:#fff!important;border-color:var(--clay)!important}
+@media(max-width:760px){
+  .links{width:100%;height:auto;flex-wrap:wrap;justify-content:flex-start;align-items:center;gap:8px 10px;padding:6px 0 3px}
+  .links .hide{display:initial}
+  .links .instagram-nav{display:inline-flex;padding:8px 10px;font-size:10px}
+  .links .button{margin-left:auto;padding:9px 11px}
+  .nav{align-items:center}
+  .actions{align-items:stretch}
+  .actions .button{min-height:42px}
+}
+@media(max-width:440px){
+  .links{gap:7px;justify-content:space-between}
+  .links>a{font-size:10px}
+  .links .button{margin-left:0;padding:9px 10px}
+  .links .instagram-nav{padding:8px 9px}
+  .actions .button{font-size:9px;padding:11px 10px}
+  .contact-actions{flex-direction:column;align-items:stretch;width:min(100%,300px);margin:0 auto}
+  .contact-actions .button{width:100%}
+}
+
 </style>
 
 <link rel="icon" type="image/png" href="favicon.png?v=2">
@@ -116,11 +144,11 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
 <div class="announcement">Acessórios autorais · Criados com intenção</div>
 <header><div class="wrap nav">
 <a class="brand" href="#inicio"><span class="mark">K</span><span><span class="brand-name">Kriativa Essência</span><br><span class="brand-sub">Acessórios autorais</span></span></a>
-<nav class="links"><a href="#sobre">A marca</a><a href="#catalogo">Catálogo</a><a class="hide" href="https://www.instagram.com/kriativaessencia/" target="_blank" rel="noopener">Instagram ↗</a><a class="button" href="https://wa.me/558291895645?text=Ol%C3%A1%2C%20Michelle%21%20Vim%20pelo%20site%20da%20Kriativa%20Ess%C3%AAncia%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20acess%C3%B3rios." target="_blank" rel="noopener">WhatsApp ↗</a></nav>
+<nav class="links"><a href="#sobre">A marca</a><a href="#catalogo">Catálogo</a><a class="instagram-nav" href="https://www.instagram.com/kriativaessencia/" target="_blank" rel="noopener" aria-label="Visitar o Instagram da Kriativa Essência">Instagram ↗</a><a class="button" href="https://wa.me/558291895645?text=Ol%C3%A1%2C%20Michelle%21%20Vim%20pelo%20site%20da%20Kriativa%20Ess%C3%AAncia%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20acess%C3%B3rios." target="_blank" rel="noopener">WhatsApp ↗</a></nav>
 </div></header>
 <main>
 <section class="hero" id="inicio"><div class="hero-grid">
-<div class="hero-copy"><div class="eyebrow">Feito para expressar quem você é</div><h1>Pequenos detalhes.<br><em>Essência única.</em></h1><p>Acessórios autorais que carregam criatividade, personalidade e cuidado em cada detalhe. Descubra peças feitas para fazer parte da sua história.</p><div class="actions"><a class="button" href="#catalogo">Conheça as peças ↓</a><a class="button alt" href="https://wa.me/558291895645?text=Ol%C3%A1%2C%20Michelle%21%20Vim%20pelo%20site%20da%20Kriativa%20Ess%C3%AAncia%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20acess%C3%B3rios." target="_blank" rel="noopener">Fale com a Michelle ↗</a></div><div class="note">Criatividade que ganha forma em cada detalhe.</div></div>
+<div class="hero-copy"><div class="eyebrow">Feito para expressar quem você é</div><h1>Pequenos detalhes.<br><em>Essência única.</em></h1><p>Acessórios autorais que carregam criatividade, personalidade e cuidado em cada detalhe. Descubra peças feitas para fazer parte da sua história.</p><div class="actions"><a class="button" href="#catalogo">Conheça as peças ↓</a><a class="button alt" href="https://wa.me/558291895645?text=Ol%C3%A1%2C%20Michelle%21%20Vim%20pelo%20site%20da%20Kriativa%20Ess%C3%AAncia%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20acess%C3%B3rios." target="_blank" rel="noopener">Fale com a Michelle ↗</a><a class="button instagram-cta" href="https://www.instagram.com/kriativaessencia/" target="_blank" rel="noopener">Ver Instagram ↗</a></div><div class="note">Criatividade que ganha forma em cada detalhe.</div></div>
 <div class="hero-art"><div class="stamp">Kriativa Essência · Feito à mão</div><div class="orbit"><svg class="leaf" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração botânica decorativa"><path d="M100 282C103 214 93 144 101 27" stroke="#d6d8c7" stroke-width="1.8"/><path d="M100 240C52 231 27 192 33 151C77 162 102 196 100 240Z" fill="#a7b99b" stroke="#d6d8c7"/><path d="M101 187C149 175 171 137 161 99C119 112 97 149 101 187Z" fill="#6e8b6b" stroke="#d6d8c7"/><path d="M100 135C62 123 49 92 62 62C94 75 107 102 100 135Z" fill="#c1c9af" stroke="#d6d8c7"/><path d="M101 85C130 74 140 47 129 25C104 37 94 59 101 85Z" fill="#879e7e" stroke="#d6d8c7"/><path d="M99 282L33 151M101 187L161 99M100 135L62 62M101 85L129 25" stroke="#d6d8c7" stroke-width="1"/></svg></div><div class="art-caption">Intenção em cada detalhe</div></div>
 </div></section>
 <div class="ticker"><span>Peças com personalidade</span><span>Detalhes que contam histórias</span><span>Feito com criatividade</span></div>
@@ -148,7 +176,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
 <div class="toolbar"><span>Peças autorais · Novidades</span><span id="catalog-count">Carregando catálogo…</span></div>
 <div id="products" class="grid" aria-live="polite"></div><p id="catalog-message"></p>
 </div></section>
-<section class="contact"><div class="eyebrow">Vamos conversar?</div><h2>Encontrou uma peça que combina com você?</h2><p>Chame a Michelle pelo WhatsApp para tirar dúvidas, consultar disponibilidade ou saber mais sobre os acessórios.</p><a class="button" href="https://wa.me/558291895645?text=Ol%C3%A1%2C%20Michelle%21%20Vim%20pelo%20site%20da%20Kriativa%20Ess%C3%AAncia%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20acess%C3%B3rios." target="_blank" rel="noopener">Conversar pelo WhatsApp ↗</a><p class="contact-number">Michelle Santos · +55 (82) 9189-5645</p></section>
+<section class="contact"><div class="eyebrow">Vamos conversar?</div><h2>Encontrou uma peça que combina com você?</h2><p>Chame a Michelle pelo WhatsApp para tirar dúvidas, consultar disponibilidade ou saber mais sobre os acessórios.</p><div class="contact-actions"><a class="button" href="https://wa.me/558291895645?text=Ol%C3%A1%2C%20Michelle%21%20Vim%20pelo%20site%20da%20Kriativa%20Ess%C3%AAncia%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20acess%C3%B3rios." target="_blank" rel="noopener">Conversar pelo WhatsApp ↗</a><a class="button instagram-contact" href="https://www.instagram.com/kriativaessencia/" target="_blank" rel="noopener">Seguir no Instagram ↗</a></div><p class="contact-number">Michelle Santos · +55 (82) 9189-5645</p></section>
 </main>
 <footer><div class="wrap foot"><span>© <span id="year"></span> Kriativa Essência · Acessórios autorais</span><span><a href="https://www.instagram.com/kriativaessencia/" target="_blank" rel="noopener">Instagram ↗</a> · <a href="admin.html">Acesso administrativo</a></span></div></footer>
 <a class="whatsapp-float" href="https://wa.me/558291895645?text=Ol%C3%A1%2C%20Michelle%21%20Vim%20pelo%20site%20da%20Kriativa%20Ess%C3%AAncia%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20acess%C3%B3rios." target="_blank" rel="noopener" aria-label="Conversar no WhatsApp com Michelle Santos">
