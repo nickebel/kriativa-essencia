@@ -28,6 +28,10 @@ No repositório, abra **Settings → Pages** e selecione publicação pela branc
 O catálogo só ficará sincronizado e o painel só permitirá operações após configurar o Supabase. O bucket `product-images` é público para que visitantes possam ver as imagens; apenas a conta autorizada pelas políticas do banco pode enviar ou excluir arquivos.
 
 
-## React component demo (isolated)
+## CSS-only testimonials demo
 
-A separate Vite + React + TypeScript demo for the animated testimonials component lives in [`react-app/`](react-app/README.md). It does not replace the existing static homepage. See the folder README for setup and for the steps required before deploying the demo publicly.
+The animated testimonials layout is also available as plain HTML and CSS:
+- `testimonials-demo.html`: standalone preview page.
+- `testimonials.css`: card styling, responsive columns, and CSS keyframe animation.
+
+Open `testimonials-demo.html` to preview it. No Node.js, React, TypeScript, or npm dependencies are required. The demo is separate from the storefront, and its example reviews are placeholders—not verified customer testimonials. Replace the content with genuine reviews and permission to publish before using it for the brand. The animation respects the browser's reduced-motion accessibility preference.
