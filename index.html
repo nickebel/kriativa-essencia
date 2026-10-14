@@ -92,6 +92,20 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
 .whatsapp-float svg{width:22px;height:22px;flex:0 0 22px}
 @media(prefers-reduced-motion:reduce){.brand-values-track{animation:none!important;transform:none!important}.brand-values-viewport{height:auto;min-height:0;overflow:visible;-webkit-mask-image:none;mask-image:none}.brand-values-column{height:auto;overflow:visible}.brand-values-group[aria-hidden="true"]{display:none}}
 
+
+/* Final mobile overrides must come after the base brand-value styles. */
+@media(max-width:760px){
+  .brand-values-viewport{height:600px}
+  .brand-value-card{padding:22px}
+}
+@media(max-width:440px){
+  .brand-values-viewport{height:560px}
+  .brand-value-card{padding:22px}
+  .brand-value-card h3{font-size:21px}
+  .whatsapp-float{right:13px;bottom:13px;width:54px;height:54px;padding:0;justify-content:center;border-radius:50%}
+  .whatsapp-float span{display:none}
+}
+
 </style>
 
 <link rel="icon" type="image/png" href="favicon.png?v=2">
