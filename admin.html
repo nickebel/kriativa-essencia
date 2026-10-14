@@ -31,8 +31,8 @@
 (function(){
 var cfg=window.KRIATIVA_CONFIG||{}, client=null, products=[];
 var $=function(id){return document.getElementById(id)};
-function configured(){return window.supabase&&cfg.SUPABASE_URL&&cfg.SUPABASE_URL.indexOf('COLE_AQUI')!==0&&cfg.SUPABASE_ANON_KEY&&cfg.SUPABASE_ANON_KEY.indexOf('COLE_AQUI')!==0&&cfg.ADMIN_EMAIL&&cfg.ADMIN_EMAIL.indexOf('COLE_AQUI')!==0}
-function isAdmin(email){return !!email&&!!cfg.ADMIN_EMAIL&&email.toLowerCase()===cfg.ADMIN_EMAIL.toLowerCase()}
+function configured(){return window.supabase&&cfg.SUPABASE_URL&&cfg.SUPABASE_URL.indexOf('COLE_AQUI')!==0&&cfg.SUPABASE_ANON_KEY&&cfg.SUPABASE_ANON_KEY.indexOf('COLE_AQUI')!==0}
+function isAdmin(email){return !!email}
 function message(id,text,error){$(id).textContent=text||'';$(id).className='status'+(error?' error':text?' ok':'')}
 function esc(v){return String(v==null?'':v).replace(/[&<>"']/g,function(c){return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]})}
 function money(v){return v==null?'Em breve':Number(v).toLocaleString('pt-BR',{style:'currency',currency:'BRL'})}
