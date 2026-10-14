@@ -9,6 +9,6 @@
  * inscrições públicas no Supabase Auth.
  */
 window.KRIATIVA_CONFIG = {
-  SUPABASE_URL: 'COLE_AQUI_A_URL_DO_PROJETO_SUPABASE',
-  SUPABASE_ANON_KEY: 'COLE_AQUI_A_CHAVE_PUBLICA_ANON'
+  SUPABASE_URL: 'https://kxkehnkhbjqipxodqkry.supabase.co',
+  SUPABASE_ANON_KEY: 'sb_publishable_Iq9YeRLB7EFTgereX5lh4A_j4rOaJKB'
 };
