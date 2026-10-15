@@ -226,6 +226,26 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
 .values-row h3{margin:0 0 7px;color:var(--green);font:25px/1.2 var(--serif);font-weight:400}
 .values-row p{margin:0;color:var(--muted);font-size:13px;line-height:1.75;max-width:430px}
 .values-arrow{color:var(--clay);font:20px/1 var(--serif);opacity:.75}
+/* Colunas verticais animadas na seção de identidade — CSS puro */
+.values-motion-grid{display:flex;align-items:flex-start;justify-content:center;gap:clamp(16px,2.4vw,24px);height:660px;margin-top:clamp(28px,4vw,42px);overflow:hidden;-webkit-mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(to bottom,transparent 0%,#000 12%,#000 88%,transparent 100%)}
+.values-motion-column{height:100%;flex:1 1 0;min-width:0;max-width:360px;overflow:hidden}
+.values-motion-column--third{display:none}
+.values-motion-track{display:flex;flex-direction:column;gap:0;animation:values-motion-scroll var(--vm-duration,26s) linear infinite;will-change:transform}
+.values-motion-column--reverse .values-motion-track{animation-direction:reverse}
+.values-motion-column:hover .values-motion-track,.values-motion-column:focus-within .values-motion-track{animation-play-state:paused}
+.values-motion-group{display:flex;flex-direction:column;gap:18px;padding-bottom:18px}
+.values-motion-card{position:relative;min-height:190px;padding:clamp(20px,2.5vw,28px);border:1px solid var(--line);border-radius:22px;background:var(--paper);box-shadow:0 12px 32px #28372d0b;transition:transform .25s ease,box-shadow .25s ease}
+.values-motion-column:hover .values-motion-card{box-shadow:0 14px 34px #28372d12}
+.values-motion-index{display:inline-grid;place-items:center;width:35px;height:35px;margin:0 10px 18px 0;border:1px solid #d7ddce;border-radius:50%;background:#f0f1e9;color:var(--green);font:italic 17px/1 var(--serif);vertical-align:middle}
+.values-motion-kicker{color:var(--clay);font-size:9px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;vertical-align:middle}
+.values-motion-card h3{margin:0 0 9px;color:var(--green);font:clamp(21px,2vw,26px)/1.2 var(--serif);font-weight:400;letter-spacing:-.015em}
+.values-motion-card p{margin:0;color:var(--muted);font-size:12px;line-height:1.8}
+@keyframes values-motion-scroll{from{transform:translateY(0)}to{transform:translateY(-50%)}}
+@media(min-width:640px){.values-motion-column:nth-child(2){display:block}}
+@media(min-width:1024px){.values-motion-column--third{display:block}}
+@media(max-width:760px){.values-motion-grid{height:590px;gap:14px}.values-motion-card{padding:22px}}
+@media(max-width:440px){.values-motion-grid{height:560px}.values-motion-card{min-height:178px;padding:21px}}
+@media(prefers-reduced-motion:reduce){.values-motion-grid{height:auto;overflow:visible;-webkit-mask-image:none;mask-image:none}.values-motion-column{height:auto;overflow:visible}.values-motion-track{animation:none!important;transform:none!important;will-change:auto}.values-motion-group[aria-hidden="true"]{display:none}}
 .hero-feature[hidden]{display:none!important}
 .hero-art.has-feature .orbit{visibility:hidden;opacity:0;transform:scale(.96)}
 .hero-feature{position:absolute;inset:8px 0 18px;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;width:100%;padding:12px 18px 18px;text-align:center}.hero-art.has-feature .art-caption{display:none}
@@ -283,30 +303,86 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
       <div><div class="eyebrow">A identidade da marca</div><h2>Detalhes que falam por você.</h2></div>
       <p>Pequenos acessórios podem acompanhar seu jeito de combinar cores, formas e momentos.</p>
     </div>
-    <div class="values-editorial">
-      <div class="values-lead">
-        <span class="values-monogram" aria-hidden="true">K</span>
-        <span class="values-eyebrow">01 / Identidade</span>
-        <h3>Seu estilo, do seu jeito.</h3>
-        <p>Escolha peças que conversem com sua personalidade e completem o visual sem tirar o protagonismo de quem usa.</p>
-        <a class="values-link" href="#catalogo">Explorar o catálogo <span aria-hidden="true">↗</span></a>
+    <div class="values-motion-grid" aria-label="Ideias que inspiram a Kriativa Essência">
+      <div class="values-motion-column">
+        <div class="values-motion-track" style="--vm-duration: 25s">
+          <div class="values-motion-group">
+            <article class="values-motion-card">
+              <span class="values-motion-index">01</span><span class="values-motion-kicker">Identidade</span>
+              <h3>Seu estilo, do seu jeito.</h3>
+              <p>Escolha peças que conversem com sua personalidade e completem o visual sem tirar o protagonismo de quem usa.</p>
+            </article>
+            <article class="values-motion-card">
+              <span class="values-motion-index">02</span><span class="values-motion-kicker">Criatividade</span>
+              <h3>Novas formas de combinar.</h3>
+              <p>Cores, formas e texturas abrem espaço para experimentar novas maneiras de expressar sua identidade.</p>
+            </article>
+            <article class="values-motion-card">
+              <span class="values-motion-index">03</span><span class="values-motion-kicker">Peças autorais</span>
+              <h3>Detalhes com personalidade.</h3>
+              <p>Acessórios que valorizam as pequenas escolhas e acrescentam um toque pessoal à composição.</p>
+            </article>
+          </div>
+          <div class="values-motion-group" aria-hidden="true">
+            <article class="values-motion-card"><span class="values-motion-index">01</span><span class="values-motion-kicker">Identidade</span><h3>Seu estilo, do seu jeito.</h3><p>Escolha peças que conversem com sua personalidade e completem o visual sem tirar o protagonismo de quem usa.</p></article>
+            <article class="values-motion-card"><span class="values-motion-index">02</span><span class="values-motion-kicker">Criatividade</span><h3>Novas formas de combinar.</h3><p>Cores, formas e texturas abrem espaço para experimentar novas maneiras de expressar sua identidade.</p></article>
+            <article class="values-motion-card"><span class="values-motion-index">03</span><span class="values-motion-kicker">Peças autorais</span><h3>Detalhes com personalidade.</h3><p>Acessórios que valorizam as pequenas escolhas e acrescentam um toque pessoal à composição.</p></article>
+          </div>
+        </div>
       </div>
-      <div class="values-list" aria-label="O que inspira a Kriativa Essência">
-        <article class="values-row">
-          <span class="values-index">02</span>
-          <div><h3>Criatividade</h3><p>Cores, formas e combinações para experimentar novas maneiras de expressar seu estilo.</p></div>
-          <span class="values-arrow" aria-hidden="true">↗</span>
-        </article>
-        <article class="values-row">
-          <span class="values-index">03</span>
-          <div><h3>Cuidado nos detalhes</h3><p>Peças escolhidas para acrescentar algo especial ao dia a dia, com atenção à composição visual.</p></div>
-          <span class="values-arrow" aria-hidden="true">↗</span>
-        </article>
-        <article class="values-row">
-          <span class="values-index">04</span>
-          <div><h3>Versatilidade</h3><p>Acessórios para combinar com diferentes looks e ocasiões, do seu jeito.</p></div>
-          <span class="values-arrow" aria-hidden="true">↗</span>
-        </article>
+
+      <div class="values-motion-column values-motion-column--reverse">
+        <div class="values-motion-track" style="--vm-duration: 31s">
+          <div class="values-motion-group">
+            <article class="values-motion-card">
+              <span class="values-motion-index">04</span><span class="values-motion-kicker">Cuidado</span>
+              <h3>O encanto está nos detalhes.</h3>
+              <p>Um olhar atento para cores, formas e acabamentos ajuda cada acessório a encontrar seu lugar no conjunto.</p>
+            </article>
+            <article class="values-motion-card">
+              <span class="values-motion-index">05</span><span class="values-motion-kicker">Versatilidade</span>
+              <h3>Para diferentes momentos.</h3>
+              <p>Ideias que acompanham diferentes looks e ocasiões, para você adaptar as peças ao seu próprio ritmo.</p>
+            </article>
+            <article class="values-motion-card">
+              <span class="values-motion-index">06</span><span class="values-motion-kicker">Expressão</span>
+              <h3>Um toque que é só seu.</h3>
+              <p>Pequenos elementos podem transformar uma composição e destacar aquilo que torna seu estilo único.</p>
+            </article>
+          </div>
+          <div class="values-motion-group" aria-hidden="true">
+            <article class="values-motion-card"><span class="values-motion-index">04</span><span class="values-motion-kicker">Cuidado</span><h3>O encanto está nos detalhes.</h3><p>Um olhar atento para cores, formas e acabamentos ajuda cada acessório a encontrar seu lugar no conjunto.</p></article>
+            <article class="values-motion-card"><span class="values-motion-index">05</span><span class="values-motion-kicker">Versatilidade</span><h3>Para diferentes momentos.</h3><p>Ideias que acompanham diferentes looks e ocasiões, para você adaptar as peças ao seu próprio ritmo.</p></article>
+            <article class="values-motion-card"><span class="values-motion-index">06</span><span class="values-motion-kicker">Expressão</span><h3>Um toque que é só seu.</h3><p>Pequenos elementos podem transformar uma composição e destacar aquilo que torna seu estilo único.</p></article>
+          </div>
+        </div>
+      </div>
+
+      <div class="values-motion-column values-motion-column--third">
+        <div class="values-motion-track" style="--vm-duration: 27s">
+          <div class="values-motion-group">
+            <article class="values-motion-card">
+              <span class="values-motion-index">07</span><span class="values-motion-kicker">Combinações</span>
+              <h3>Explore novas possibilidades.</h3>
+              <p>Misture cores, formas e materiais até encontrar combinações que façam sentido para você.</p>
+            </article>
+            <article class="values-motion-card">
+              <span class="values-motion-index">08</span><span class="values-motion-kicker">Dia a dia</span>
+              <h3>Detalhes que acompanham você.</h3>
+              <p>Acessórios para fazer parte da rotina e estar presentes nos momentos que merecem um toque especial.</p>
+            </article>
+            <article class="values-motion-card">
+              <span class="values-motion-index">09</span><span class="values-motion-kicker">Autenticidade</span>
+              <h3>Seu jeito é o que importa.</h3>
+              <p>Não existe uma única forma de expressar seu estilo: escolha o que combina com você.</p>
+            </article>
+          </div>
+          <div class="values-motion-group" aria-hidden="true">
+            <article class="values-motion-card"><span class="values-motion-index">07</span><span class="values-motion-kicker">Combinações</span><h3>Explore novas possibilidades.</h3><p>Misture cores, formas e materiais até encontrar combinações que façam sentido para você.</p></article>
+            <article class="values-motion-card"><span class="values-motion-index">08</span><span class="values-motion-kicker">Dia a dia</span><h3>Detalhes que acompanham você.</h3><p>Acessórios para fazer parte da rotina e estar presentes nos momentos que merecem um toque especial.</p></article>
+            <article class="values-motion-card"><span class="values-motion-index">09</span><span class="values-motion-kicker">Autenticidade</span><h3>Seu jeito é o que importa.</h3><p>Não existe uma única forma de expressar seu estilo: escolha o que combina com você.</p></article>
+          </div>
+        </div>
       </div>
     </div>
   </div>
