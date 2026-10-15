@@ -186,6 +186,78 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
 <link rel="shortcut icon" type="image/png" href="favicon.png?v=3">
 <link rel="apple-touch-icon" href="favicon.png?v=3">
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"Kriativa Essência","url":"https://kriativaessencia.com.br/","logo":"https://kriativaessencia.com.br/favicon.png","image":"https://kriativaessencia.com.br/og-image.svg","sameAs":["https://www.instagram.com/kriativaessencia/"],"contactPoint":{"@type":"ContactPoint","telephone":"+558291895645","contactType":"customer service","availableLanguage":"Portuguese"}}</script>
+<style>
+:root{--radius-sm:7px;--radius-md:14px;--radius-lg:26px}
+.button{min-height:46px;border-radius:var(--radius-sm);padding:13px 19px;font-size:11px;letter-spacing:.075em;box-shadow:0 3px 12px #28372d0d}
+.button:hover{transform:translateY(-1px);box-shadow:0 7px 18px #28372d14}
+.button.alt{box-shadow:none;border-color:#aeb7a5}
+.button.alt:hover{background:var(--green);border-color:var(--green)}
+.actions .instagram-cta{background:transparent!important;color:var(--green)!important;border-color:transparent!important;box-shadow:none;padding-inline:10px}
+.actions .instagram-cta:hover{background:#ffffff70!important;color:var(--green)!important;border-color:#ffffff70!important;box-shadow:none;transform:none}
+.admin-nav{border-radius:var(--radius-sm);min-height:40px}
+.instagram-nav{border-radius:var(--radius-sm)}
+.hero-copy p,.about-copy p,.contact p{font-size:15px;line-height:1.8}
+.hero-copy p{max-width:445px}
+.about-visual{border-radius:var(--radius-lg)}
+.photo{border:1px solid var(--line);border-radius:var(--radius-md);background:#f0eee6}
+.photo img{transition:transform .35s ease}
+.card{min-width:0}
+.info{padding:17px 3px}
+.title{font-size:24px}
+.badge{border-radius:3px;box-shadow:0 2px 8px #282d2710}
+.product-cta{min-height:32px;display:inline-flex;align-items:center}
+.contact{position:relative}
+.contact .button{border-radius:var(--radius-sm)}
+.contact .instagram-contact{background:transparent!important;border-color:#d7c6b8!important}
+.contact .instagram-contact:hover{background:var(--clay)!important}
+.values-editorial{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);gap:clamp(28px,5vw,72px);align-items:stretch}
+.values-lead{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;align-items:flex-start;min-height:360px;padding:clamp(28px,4vw,48px);background:var(--sage);border-radius:var(--radius-lg)}
+.values-lead:after{content:"K";position:absolute;z-index:-1;right:-.06em;bottom:-.34em;color:#28372d0a;font:clamp(180px,21vw,270px)/1 var(--serif);pointer-events:none}
+.values-monogram{display:grid;place-items:center;width:48px;height:48px;margin-bottom:28px;border:1px solid #9eac96;border-radius:50%;color:var(--green);font:italic 27px var(--serif)}
+.values-eyebrow{color:var(--clay);font-size:10px;font-weight:700;letter-spacing:.16em;text-transform:uppercase}
+.values-lead h3{max-width:360px;margin:12px 0;font:clamp(29px,3.2vw,42px)/1.12 var(--serif);font-weight:400;color:var(--green);letter-spacing:-.025em}
+.values-lead p{max-width:390px;margin:0 0 24px;color:#586357;font-size:14px;line-height:1.8}
+.values-link{display:inline-flex;align-items:center;gap:12px;margin-top:auto;padding:9px 0;color:var(--green);font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;border-bottom:1px solid var(--clay)}
+.values-link span{font-size:16px;transition:transform .2s}
+.values-link:hover span{transform:translate(2px,-2px)}
+.values-list{border-top:1px solid var(--line)}
+.values-row{display:grid;grid-template-columns:48px minmax(0,1fr) 20px;align-items:start;gap:16px;padding:25px 0;border-bottom:1px solid var(--line)}
+.values-index{color:var(--clay);font:italic 25px/1.1 var(--serif)}
+.values-row h3{margin:0 0 7px;color:var(--green);font:25px/1.2 var(--serif);font-weight:400}
+.values-row p{margin:0;color:var(--muted);font-size:13px;line-height:1.75;max-width:430px}
+.values-arrow{color:var(--clay);font:20px/1 var(--serif);opacity:.75}
+.hero-feature[hidden]{display:none!important}
+.hero-art.has-feature .orbit{visibility:hidden;opacity:0;transform:scale(.96)}
+.hero-feature{position:absolute;inset:8px 0 18px;z-index:2;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:11px;width:100%;padding:12px 18px 18px;text-align:center}.hero-art.has-feature .art-caption{display:none}
+.hero-feature-label{color:#d7dfcf;font-size:9px;font-weight:700;letter-spacing:.2em;text-transform:uppercase}
+.hero-feature-frame{width:clamp(158px,22vw,260px);aspect-ratio:4/4.45;padding:9px;background:var(--paper);border:1px solid #ffffff80;border-radius:4px;box-shadow:0 18px 45px #111a1350;transform:rotate(1.5deg)}
+.hero-feature-frame img{display:block;width:100%;height:100%;object-fit:contain;background:#eeece3}
+.hero-feature-meta{display:flex;flex-direction:column;gap:2px;color:#f7f3eb;max-width:min(90%,300px)}
+.hero-feature-meta span{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;font:italic 16px var(--serif)}
+.hero-feature-meta strong{color:#d7dfcf;font-size:11px;font-weight:600;letter-spacing:.08em}
+@media(hover:hover){.card:hover .photo img{transform:scale(1.035)}}
+@media(max-width:760px){
+ .values-editorial{grid-template-columns:1fr;gap:30px}
+ .values-lead{min-height:330px;padding:30px}
+ .values-lead h3{font-size:34px}
+ .values-row{grid-template-columns:38px minmax(0,1fr) 18px;gap:12px;padding:22px 0}
+ .values-row h3{font-size:23px}
+ .hero-feature{gap:7px;padding:8px 16px}
+ .hero-feature-frame{width:clamp(148px,42vw,190px)}
+ .hero-feature-label{font-size:8px}
+ .hero-feature-meta span{font-size:14px}
+}
+@media(max-width:440px){
+ .photo{border-radius:11px}
+ .title{font-size:19px}
+ .values-lead{border-radius:20px}
+ .values-lead h3{font-size:31px}
+ .values-row p{font-size:12px}
+ .nav .button{border-radius:6px}
+ .hero-feature-frame{width:155px}
+}
+@media(prefers-reduced-motion:reduce){.photo img,.values-link span{transition:none!important}.hero-art.has-feature .orbit{transform:none}}
+</style>
 </head>
 <body>
 <a class="skip-link" href="#conteudo">Pular para o conteúdo</a>
@@ -197,7 +269,7 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
 <main id="conteudo">
 <section class="hero" id="inicio"><div class="hero-grid">
 <div class="hero-copy"><div class="eyebrow">Feito para expressar quem você é</div><h1>Pequenos detalhes.<br><em>Essência única.</em></h1><p>Acessórios autorais que carregam criatividade, personalidade e cuidado em cada detalhe. Descubra peças feitas para fazer parte da sua história.</p><div class="actions"><a class="button" href="#catalogo">Conheça as peças ↓</a><a class="button alt" href="https://wa.me/558291895645?text=Ol%C3%A1%2C%20Michelle%21%20Vim%20pelo%20site%20da%20Kriativa%20Ess%C3%AAncia%20e%20gostaria%20de%20saber%20mais%20sobre%20os%20acess%C3%B3rios." target="_blank" rel="noopener noreferrer">Fale com a Michelle ↗</a><a class="button instagram-cta" href="https://www.instagram.com/kriativaessencia/" target="_blank" rel="noopener noreferrer">Ver Instagram ↗</a></div><div class="note">Criatividade que ganha forma em cada detalhe.</div></div>
-<div class="hero-art"><div class="stamp">Kriativa Essência · Feito à mão</div><div class="orbit"><svg class="leaf" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração botânica decorativa"><path d="M100 282C103 214 93 144 101 27" stroke="#d6d8c7" stroke-width="1.8"/><path d="M100 240C52 231 27 192 33 151C77 162 102 196 100 240Z" fill="#a7b99b" stroke="#d6d8c7"/><path d="M101 187C149 175 171 137 161 99C119 112 97 149 101 187Z" fill="#6e8b6b" stroke="#d6d8c7"/><path d="M100 135C62 123 49 92 62 62C94 75 107 102 100 135Z" fill="#c1c9af" stroke="#d6d8c7"/><path d="M101 85C130 74 140 47 129 25C104 37 94 59 101 85Z" fill="#879e7e" stroke="#d6d8c7"/><path d="M99 282L33 151M101 187L161 99M100 135L62 62M101 85L129 25" stroke="#d6d8c7" stroke-width="1"/></svg></div><div class="art-caption">Intenção em cada detalhe</div></div>
+<div class="hero-art"><div class="stamp">Kriativa Essência · Feito à mão</div><div class="orbit"><svg class="leaf" viewBox="0 0 200 300" fill="none" xmlns="http://www.w3.org/2000/svg" aria-label="Ilustração botânica decorativa"><path d="M100 282C103 214 93 144 101 27" stroke="#d6d8c7" stroke-width="1.8"/><path d="M100 240C52 231 27 192 33 151C77 162 102 196 100 240Z" fill="#a7b99b" stroke="#d6d8c7"/><path d="M101 187C149 175 171 137 161 99C119 112 97 149 101 187Z" fill="#6e8b6b" stroke="#d6d8c7"/><path d="M100 135C62 123 49 92 62 62C94 75 107 102 100 135Z" fill="#c1c9af" stroke="#d6d8c7"/><path d="M101 85C130 74 140 47 129 25C104 37 94 59 101 85Z" fill="#879e7e" stroke="#d6d8c7"/><path d="M99 282L33 151M101 187L161 99M100 135L62 62M101 85L129 25" stroke="#d6d8c7" stroke-width="1"/></svg></div><div class="hero-feature" id="hero-feature" hidden></div><div class="art-caption">Intenção em cada detalhe</div></div>
 </div></section>
 <div class="ticker"><span>Peças com personalidade</span><span>Detalhes que contam histórias</span><span>Feito com criatividade</span></div>
 <section class="section" id="sobre"><div class="wrap about-grid">
@@ -208,15 +280,35 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
 <section class="section brand-values" id="essencia">
   <div class="wrap">
     <div class="section-head">
-      <div><div class="eyebrow">A essência em movimento</div><h2>Detalhes que contam histórias.</h2></div>
-      <p>Criatividade, cuidado e personalidade inspiram cada detalhe da Kriativa Essência.</p>
+      <div><div class="eyebrow">A identidade da marca</div><h2>Detalhes que falam por você.</h2></div>
+      <p>Pequenos acessórios podem acompanhar seu jeito de combinar cores, formas e momentos.</p>
     </div>
-    <div class="brand-values-viewport" aria-label="Valores da Kriativa Essência em cartões animados">
-      <div class="brand-values-column values-one"><div class="brand-values-track" style="--value-duration:29s"><div class="brand-values-group"><article class="brand-value-card"><span class="value-mark">K</span><span class="value-tag">Identidade</span><h3>Seu estilo, sua essência.</h3><p>Acessórios que acrescentam personalidade ao visual e valorizam aquilo que torna cada pessoa única.</p></article><article class="brand-value-card"><span class="value-mark">✳</span><span class="value-tag">Criatividade</span><h3>Novas formas de combinar.</h3><p>Cores, formas e combinações para inspirar novas maneiras de expressar quem você é.</p></article><article class="brand-value-card"><span class="value-mark">♡</span><span class="value-tag">Cuidado</span><h3>O detalhe faz diferença.</h3><p>Pequenos detalhes podem transformar uma composição e deixá-la ainda mais especial.</p></article></div><div class="brand-values-group" aria-hidden="true"><article class="brand-value-card"><span class="value-mark">K</span><span class="value-tag">Identidade</span><h3>Seu estilo, sua essência.</h3><p>Acessórios que acrescentam personalidade ao visual e valorizam aquilo que torna cada pessoa única.</p></article><article class="brand-value-card"><span class="value-mark">✳</span><span class="value-tag">Criatividade</span><h3>Novas formas de combinar.</h3><p>Cores, formas e combinações para inspirar novas maneiras de expressar quem você é.</p></article><article class="brand-value-card"><span class="value-mark">♡</span><span class="value-tag">Cuidado</span><h3>O detalhe faz diferença.</h3><p>Pequenos detalhes podem transformar uma composição e deixá-la ainda mais especial.</p></article></div></div></div>
-      <div class="brand-values-column values-two"><div class="brand-values-track" style="--value-duration:35s"><div class="brand-values-group"><article class="brand-value-card"><span class="value-mark">✧</span><span class="value-tag">Estilo próprio</span><h3>Mais do que tendência.</h3><p>Encontre peças que combinem com a sua personalidade e acompanhem diferentes momentos.</p></article><article class="brand-value-card"><span class="value-mark">K</span><span class="value-tag">Atenção aos detalhes</span><h3>Feito para combinar com você.</h3><p>Acessórios pensados para complementar seu visual sem tirar o protagonismo de quem usa.</p></article><article class="brand-value-card"><span class="value-mark">♡</span><span class="value-tag">Feito com carinho</span><h3>Escolhas com significado.</h3><p>Descubra acessórios e encontre aquele detalhe que parece ter sido feito para você.</p></article></div><div class="brand-values-group" aria-hidden="true"><article class="brand-value-card"><span class="value-mark">✧</span><span class="value-tag">Estilo próprio</span><h3>Mais do que tendência.</h3><p>Encontre peças que combinem com a sua personalidade e acompanhem diferentes momentos.</p></article><article class="brand-value-card"><span class="value-mark">K</span><span class="value-tag">Atenção aos detalhes</span><h3>Feito para combinar com você.</h3><p>Acessórios pensados para complementar seu visual sem tirar o protagonismo de quem usa.</p></article><article class="brand-value-card"><span class="value-mark">♡</span><span class="value-tag">Feito com carinho</span><h3>Escolhas com significado.</h3><p>Descubra acessórios e encontre aquele detalhe que parece ter sido feito para você.</p></article></div></div></div>
-      <div class="brand-values-column values-three"><div class="brand-values-track" style="--value-duration:31s"><div class="brand-values-group"><article class="brand-value-card"><span class="value-mark">✳</span><span class="value-tag">Personalidade</span><h3>Pequenos detalhes. Essência única.</h3><p>Uma peça especial pode revelar um pouco do seu humor, da sua história e do seu jeito de ser.</p></article><article class="brand-value-card"><span class="value-mark">♡</span><span class="value-tag">Versatilidade</span><h3>Para seus diferentes momentos.</h3><p>Inspire-se para combinar acessórios com os looks e as ocasiões que fazem parte da sua vida.</p></article><article class="brand-value-card"><span class="value-mark">K</span><span class="value-tag">Kriativa Essência</span><h3>Escolha o que tem a sua cara.</h3><p>Explore o catálogo e, se uma peça chamar sua atenção, fale diretamente com a Michelle.</p></article></div><div class="brand-values-group" aria-hidden="true"><article class="brand-value-card"><span class="value-mark">✳</span><span class="value-tag">Personalidade</span><h3>Pequenos detalhes. Essência única.</h3><p>Uma peça especial pode revelar um pouco do seu humor, da sua história e do seu jeito de ser.</p></article><article class="brand-value-card"><span class="value-mark">♡</span><span class="value-tag">Versatilidade</span><h3>Para seus diferentes momentos.</h3><p>Inspire-se para combinar acessórios com os looks e as ocasiões que fazem parte da sua vida.</p></article><article class="brand-value-card"><span class="value-mark">K</span><span class="value-tag">Kriativa Essência</span><h3>Escolha o que tem a sua cara.</h3><p>Explore o catálogo e, se uma peça chamar sua atenção, fale diretamente com a Michelle.</p></article></div></div></div>
+    <div class="values-editorial">
+      <div class="values-lead">
+        <span class="values-monogram" aria-hidden="true">K</span>
+        <span class="values-eyebrow">01 / Identidade</span>
+        <h3>Seu estilo, do seu jeito.</h3>
+        <p>Escolha peças que conversem com sua personalidade e completem o visual sem tirar o protagonismo de quem usa.</p>
+        <a class="values-link" href="#catalogo">Explorar o catálogo <span aria-hidden="true">↗</span></a>
+      </div>
+      <div class="values-list" aria-label="O que inspira a Kriativa Essência">
+        <article class="values-row">
+          <span class="values-index">02</span>
+          <div><h3>Criatividade</h3><p>Cores, formas e combinações para experimentar novas maneiras de expressar seu estilo.</p></div>
+          <span class="values-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="values-row">
+          <span class="values-index">03</span>
+          <div><h3>Cuidado nos detalhes</h3><p>Peças escolhidas para acrescentar algo especial ao dia a dia, com atenção à composição visual.</p></div>
+          <span class="values-arrow" aria-hidden="true">↗</span>
+        </article>
+        <article class="values-row">
+          <span class="values-index">04</span>
+          <div><h3>Versatilidade</h3><p>Acessórios para combinar com diferentes looks e ocasiões, do seu jeito.</p></div>
+          <span class="values-arrow" aria-hidden="true">↗</span>
+        </article>
+      </div>
     </div>
-    <p class="values-footnote">Passe o cursor sobre os cartões para pausar a animação.</p>
   </div>
 </section>
 <section class="section catalog" id="catalogo"><div class="wrap">
@@ -249,7 +341,19 @@ header{position:sticky;top:0;z-index:10;background:rgba(247,243,235,.95);backdro
     document.getElementById('catalog-count').textContent=countLabel||'Catálogo em atualização';
     host.innerHTML='<div class="empty" style="grid-column:1/-1"><b>K</b><h3>'+esc(title)+'</h3><p>'+esc(description)+'</p><div class="actions" style="justify-content:center"><a class="button" href="'+whatsappLink('')+'" target="_blank" rel="noopener noreferrer">Consultar pelo WhatsApp ↗</a><a class="button alt" href="'+profile+'" target="_blank" rel="noopener noreferrer">Ver Instagram ↗</a></div></div>';
   }
+  function updateHeroFeature(items){
+    var heroArt=document.querySelector('.hero-art');
+    var slot=document.getElementById('hero-feature');
+    if(!heroArt||!slot)return;
+    var featured=(items||[]).find(function(p){return p.status!=='soon'&&safeUrl(p.image_url);});
+    if(!featured){heroArt.classList.remove('has-feature');slot.hidden=true;slot.innerHTML='';return;}
+    var image=safeUrl(featured.image_url);
+    slot.innerHTML='<span class="hero-feature-label">Uma peça do nosso catálogo</span><div class="hero-feature-frame"><img decoding="async" width="640" height="712" src="'+esc(image)+'" alt="'+esc('Foto de '+featured.name)+'"></div><div class="hero-feature-meta"><span>'+esc(featured.name)+'</span><strong>'+esc(price(featured))+'</strong></div>';
+    slot.hidden=false;
+    heroArt.classList.add('has-feature');
+  }
   function render(items){
+    updateHeroFeature(items);
     document.getElementById('catalog-count').textContent=items.length+(items.length===1?' peça':' peças');
     host.setAttribute('aria-busy','false');
     if(!items.length){renderNotice('Novidades estão chegando','Estamos preparando uma seleção de acessórios autorais. Para consultar alguma peça, fale com a Michelle.', '0 peças');return;}
