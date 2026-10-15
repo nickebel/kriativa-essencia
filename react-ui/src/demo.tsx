@@ -72,7 +72,7 @@ export default function TestimonialsDemo() {
         <motion.div
           initial={shouldReduceMotion ? false : { opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: shouldReduceMotion ? 0 : 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] }}
+          transition={{ duration: shouldReduceMotion ? 0 : 0.8, delay: 0.1, ease: [0.16, 1, 0.3, 1] as const }}
           viewport={{ once: true }}
           className="mx-auto flex max-w-2xl flex-col items-center justify-center"
         >
