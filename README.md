@@ -35,3 +35,19 @@ The animated testimonials layout is also available as plain HTML and CSS:
 - `testimonials.css`: card styling, responsive columns, and CSS keyframe animation.
 
 Open `testimonials-demo.html` to preview it. No Node.js, React, TypeScript, or npm dependencies are required. The demo is separate from the storefront, and its example reviews are placeholders—not verified customer testimonials. Replace the content with genuine reviews and permission to publish before using it for the brand. The animation respects the browser's reduced-motion accessibility preference.
+
+
+## Melhorias de SEO, acessibilidade e privacidade
+
+- A página inicial inclui título e descrição próprios, metadados Open Graph/Twitter, dados estruturados de organização, foco visível e link para pular ao conteúdo.
+- `robots.txt` e `sitemap.xml` ajudam os buscadores a descobrir as páginas públicas. O painel e a página de demonstração de depoimentos não devem ser indexados.
+- `privacidade.html` descreve os dados usados pela página pública, pelo WhatsApp, pelo catálogo Supabase e pelo login administrativo. Revise o texto se adicionar analytics, anúncios, formulários ou novos serviços.
+- `404.html` fornece uma página de erro no estilo do site. `og-image.svg` é a arte usada na prévia de compartilhamento.
+- O catálogo oferece uma alternativa de contato quando o banco não responde e as fotos são exibidas com dimensões declaradas para reduzir mudanças de layout.
+
+## Pontos que exigem confirmação no painel
+
+1. Em `supabase/schema.sql`, substitua todas as ocorrências de `EMAIL_DA_TIA_AQUI` pelo e-mail autorizado **antes** de executar o SQL. Não publique senha, chave `service_role` ou segredo no repositório.
+2. Confirme no Supabase que a RLS está ativa, que as políticas foram aplicadas e que o cadastro público de usuários está desativado. As regras no banco são a proteção efetiva do painel.
+3. O GitHub Pages não aplica arquivos de cabeçalhos como `_headers`. Cabeçalhos HTTP adicionais exigem configuração na hospedagem ou em um proxy/CDN compatível.
+4. Depois da publicação, teste a prévia de compartilhamento e envie `sitemap.xml` ao Google Search Console. A auditoria de código não substitui o teste em navegadores e celulares reais.
