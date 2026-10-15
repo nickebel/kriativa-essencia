@@ -1,0 +1,9 @@
+# Keep the optional React/Tailwind source workspace out of the public static storefront.
+# It is a local component sandbox; Pages continues to publish the root HTML storefront.
+exclude:
+  - react-ui/
+  - node_modules/
+  - vendor/
+  - .sass-cache/
+  - .jekyll-cache/
+  - .jekyll-metadata

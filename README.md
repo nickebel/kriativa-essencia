@@ -43,3 +43,22 @@ O catálogo só ficará sincronizado e o painel só permitirá operações após
 2. Confirme no Supabase que a RLS está ativa, que as políticas foram aplicadas e que o cadastro público de usuários está desativado. As regras no banco são a proteção efetiva do painel.
 3. O GitHub Pages não aplica arquivos de cabeçalhos como `_headers`. Cabeçalhos HTTP adicionais exigem configuração na hospedagem ou em um proxy/CDN compatível.
 4. Depois da publicação, teste a prévia de compartilhamento e envie `sitemap.xml` ao Google Search Console. A auditoria de código não substitui o teste em navegadores e celulares reais.
+
+
+## React / shadcn UI component workspace
+
+The optional `react-ui/` folder is a separate React + TypeScript + Vite sandbox. It does not replace the live static storefront in the repository root.
+
+```bash
+cd react-ui
+npm install
+npm run dev
+```
+
+- Reusable component: `react-ui/components/ui/testimonials-columns-1.tsx`
+- Demo: `react-ui/src/demo.tsx` (all testimonial copy and profiles are explicitly illustrative, not genuine customer reviews)
+- Global Tailwind CSS v4 and theme: `react-ui/src/index.css`
+- shadcn CLI aliases: `react-ui/components.json` and `react-ui/tsconfig.json`
+- The `@` alias maps to the `react-ui/` workspace root, so `@/components/ui` points to `react-ui/components/ui`.
+
+Use Node.js 22.12+ with Vite 8. Run `npm run typecheck` and `npm run build` before using the component in another application. This sandbox is not included in the live storefront's public navigation or current Pages build.
