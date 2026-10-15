@@ -1,0 +1,40 @@
+name: React UI typecheck and build
+
+on:
+  push:
+    paths:
+      - "react-ui/**"
+      - ".github/workflows/react-ui-check.yml"
+  pull_request:
+    paths:
+      - "react-ui/**"
+      - ".github/workflows/react-ui-check.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: react-ui
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Type-check
+        run: npm run typecheck
+
+      - name: Build React sandbox
+        run: npm run build
