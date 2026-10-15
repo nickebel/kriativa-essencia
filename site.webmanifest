@@ -1,0 +1,16 @@
+{
+  "name": "Kriativa Essência",
+  "short_name": "Kriativa",
+  "description": "Acessórios autorais da Kriativa Essência.",
+  "start_url": "/",
+  "display": "browser",
+  "background_color": "#f7f3eb",
+  "theme_color": "#28372d",
+  "icons": [
+    {
+      "src": "/favicon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml"
+    }
+  ]
+}
