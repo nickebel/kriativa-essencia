@@ -45,20 +45,14 @@ O catálogo só ficará sincronizado e o painel só permitirá operações após
 4. Depois da publicação, teste a prévia de compartilhamento e envie `sitemap.xml` ao Google Search Console. A auditoria de código não substitui o teste em navegadores e celulares reais.
 
 
-## React / shadcn UI component workspace
 
-The optional `react-ui/` folder is a separate React + TypeScript + Vite sandbox. It does not replace the live static storefront in the repository root.
 
-```bash
-cd react-ui
-npm install
-npm run dev
-```
+## Componente CSS-only: colunas de depoimentos
 
-- Reusable component: `react-ui/components/ui/testimonials-columns-1.tsx`
-- Demo: `react-ui/src/demo.tsx` (all testimonial copy and profiles are explicitly illustrative, not genuine customer reviews)
-- Global Tailwind CSS v4 and theme: `react-ui/src/index.css`
-- shadcn CLI aliases: `react-ui/components.json` and `react-ui/tsconfig.json`
-- The `@` alias maps to the `react-ui/` workspace root, so `@/components/ui` points to `react-ui/components/ui`.
+O componente agora é HTML + CSS puro: sem React, TypeScript, Tailwind, Motion ou JavaScript.
 
-Use Node.js 22.12+ with Vite 8. Run `npm run typecheck` and `npm run build` before using the component in another application. This sandbox is not included in the live storefront's public navigation or current Pages build.
+- Estilos reutilizáveis: `components/ui/testimonials-columns-1.css`
+- Prévia local: `dev/testimonials-columns-demo.html` (fora da publicação pública por configuração do Jekyll)
+- A prévia demonstra três colunas responsivas, animação vertical, pausa ao passar o cursor e suporte a `prefers-reduced-motion`.
+- Os textos da prévia e os nomes são fictícios e servem apenas para testar o layout. Não os publique como avaliações reais da marca.
+- Para usar a folha de estilo em outra página, inclua o arquivo CSS e use a estrutura `.testimonials-grid > .testimonials-column > .testimonials-track` descrita no CSS.
