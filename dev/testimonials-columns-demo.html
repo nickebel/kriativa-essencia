@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="robots" content="noindex, nofollow">
+  <meta name="theme-color" content="#28372d">
+  <title>Prévia CSS — Colunas de depoimentos</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../components/ui/testimonials-columns-1.css">
+  <style>
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: "DM Sans", Arial, sans-serif; }
+    .testimonials-section { min-height: 100vh; }
+    .testimonials-demo-footer { margin-top: 1.75rem; color: #62695f; font-size: .75rem; text-align: center; }
+    @media (prefers-reduced-motion: reduce) {
+      .testimonials-demo-footer::after { content: " O movimento foi desativado porque seu dispositivo solicita movimento reduzido."; }
+    }
+  </style>
+</head>
+<body>
+  <main class="testimonials-section">
+    <div class="testimonials-container">
+      <header class="testimonials-heading">
+        <span class="testimonials-eyebrow">Prévia do componente</span>
+        <h2>Colunas de depoimentos</h2>
+        <p>Componente independente, animado somente com CSS e adaptável a telas menores.</p>
+      </header>
+
+      <p class="testimonials-demo-notice">
+        <strong>Conteúdo fictício para teste visual.</strong> Estes textos e nomes não são avaliações reais da Kriativa Essência. Antes de publicar depoimentos comerciais, substitua-os por relatos genuínos e autorizados.
+      </p>
+
+      <div class="testimonials-grid" aria-label="Demonstração visual de depoimentos">
+        <div class="testimonials-column testimonials-column--first">
+          <div class="testimonials-track" style="--tc-duration: 18s">
+            <div class="testimonials-group">
+              <article class="testimonial-card">
+                <p class="testimonial-card__text">Texto de exemplo para observar como um comentário mais longo quebra em linhas e permanece confortável para leitura.</p>
+                <div class="testimonial-person">
+                  <img class="testimonial-person__image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy">
+                  <div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 01</span><span class="testimonial-person__role">Perfil fictício</span></div>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-card__text">Este cartão mostra um texto de comprimento médio e o alinhamento do retrato ao lado das informações ilustrativas da pessoa.</p>
+                <div class="testimonial-person">
+                  <img class="testimonial-person__image" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy">
+                  <div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 02</span><span class="testimonial-person__role">Perfil fictício</span></div>
+                </div>
+              </article>
+              <article class="testimonial-card">
+                <p class="testimonial-card__text">Um terceiro cartão ajuda a visualizar a distância entre elementos e a aparência do conjunto.</p>
+                <div class="testimonial-person">
+                  <img class="testimonial-person__image" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy">
+                  <div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 03</span><span class="testimonial-person__role">Perfil fictício</span></div>
+                </div>
+              </article>
+            </div>
+            <div class="testimonials-group" aria-hidden="true">
+              <article class="testimonial-card"><p class="testimonial-card__text">Texto de exemplo para observar como um comentário mais longo quebra em linhas e permanece confortável para leitura.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 01</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">Este cartão mostra um texto de comprimento médio e o alinhamento do retrato ao lado das informações ilustrativas da pessoa.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 02</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">Um terceiro cartão ajuda a visualizar a distância entre elementos e a aparência do conjunto.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 03</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-column testimonials-column--second">
+          <div class="testimonials-track" style="--tc-duration: 22s">
+            <div class="testimonials-group">
+              <article class="testimonial-card"><p class="testimonial-card__text">A segunda coluna usa uma duração diferente para dar ritmo ao layout sem precisar de JavaScript.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 04</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">O movimento pausa quando o cursor entra na coluna e é totalmente desativado para quem prefere movimento reduzido.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 05</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">Use textos de tamanhos diferentes para avaliar o equilíbrio visual antes de adicionar conteúdo real.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 06</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+            </div>
+            <div class="testimonials-group" aria-hidden="true">
+              <article class="testimonial-card"><p class="testimonial-card__text">A segunda coluna usa uma duração diferente para dar ritmo ao layout sem precisar de JavaScript.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 04</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">O movimento pausa quando o cursor entra na coluna e é totalmente desativado para quem prefere movimento reduzido.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 05</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">Use textos de tamanhos diferentes para avaliar o equilíbrio visual antes de adicionar conteúdo real.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 06</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+            </div>
+          </div>
+        </div>
+
+        <div class="testimonials-column testimonials-column--third">
+          <div class="testimonials-track" style="--tc-duration: 20s">
+            <div class="testimonials-group">
+              <article class="testimonial-card"><p class="testimonial-card__text">Este conteúdo é apenas um molde visual para personalizar depois com comentários genuínos e autorizados.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 07</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">Em telas menores, as colunas adicionais somem para preservar espaço e melhorar a leitura.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 08</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">Os exemplos ajudam a testar cartões, imagens e espaçamento; não devem ser apresentados como feedback de clientes.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 09</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+            </div>
+            <div class="testimonials-group" aria-hidden="true">
+              <article class="testimonial-card"><p class="testimonial-card__text">Este conteúdo é apenas um molde visual para personalizar depois com comentários genuínos e autorizados.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1531123897727-8f129e1688ce?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 07</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">Em telas menores, as colunas adicionais somem para preservar espaço e melhorar a leitura.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 08</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+              <article class="testimonial-card"><p class="testimonial-card__text">Os exemplos ajudam a testar cartões, imagens e espaçamento; não devem ser apresentados como feedback de clientes.</p><div class="testimonial-person"><img class="testimonial-person__image" src="https://images.unsplash.com/photo-1527980965255-d3b416303d12?auto=format&amp;fit=crop&amp;w=100&amp;h=100&amp;q=80" alt="" width="40" height="40" loading="lazy"><div class="testimonial-person__meta"><span class="testimonial-person__name">Pessoa de exemplo 09</span><span class="testimonial-person__role">Perfil fictício</span></div></div></article>
+            </div>
+          </div>
+        </div>
+      </div>
+      <p class="testimonials-demo-footer">Prévia local de desenvolvimento. O componente usa apenas HTML e CSS.</p>
+    </div>
+  </main>
+</body>
+</html>
