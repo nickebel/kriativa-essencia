@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="pt-BR"><head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#28372d"><meta name="robots" content="noindex, nofollow"><meta name="referrer" content="strict-origin-when-cross-origin">
-<title>Painel administrativo — Kriativa Essência</title>
+<title>Painel administrativo | Kriativa Essência</title>
 <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;1,400&display=swap" rel="stylesheet">
 <style>
 :root{--g:#28372d;--cream:#f7f3eb;--paper:#fffdf8;--sage:#e2e5d9;--clay:#b87558;--ink:#282d27;--muted:#72766d;--line:#deded3}*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:14px/1.6 "DM Sans",Arial,sans-serif}.skip-link{position:fixed;left:16px;top:12px;z-index:1000;transform:translateY(-160%);padding:12px 16px;background:var(--paper);color:var(--g);border:2px solid var(--g);border-radius:6px;font-size:14px;font-weight:700}.skip-link:focus{transform:translateY(0)}:focus-visible{outline:3px solid var(--g);outline-offset:3px}.wrap{max-width:1050px;width:calc(100% - 32px);margin:auto}header{background:var(--g);color:var(--cream);padding:22px 0}.head{display:flex;justify-content:space-between;align-items:center;gap:15px}.brand{font:23px "Playfair Display",Georgia,serif}.back{color:#e2e5d9;font-size:12px}main{padding:45px 0 70px}.eyebrow{font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:var(--clay);font-weight:700}h1{font:clamp(32px,5vw,47px)/1.15 "Playfair Display",Georgia,serif;font-weight:400;color:var(--g);margin:8px 0 15px}h2{font:25px "Playfair Display",Georgia,serif;font-weight:400;color:var(--g);margin:0 0 15px}p{color:var(--muted)}.panel{background:var(--paper);border:1px solid var(--line);padding:25px;margin:25px 0}.narrow{max-width:480px}.hint{font-size:12px}.status{font-size:12px;margin-top:12px;color:var(--muted);min-height:18px}.status.error{color:#a13a2b}.status.ok{color:#316044}.fields{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:flex;flex-direction:column;gap:6px}.full{grid-column:1/-1}label{font-size:11px;text-transform:uppercase;letter-spacing:.09em;color:var(--g)}input,textarea,select{width:100%;border:1px solid #cbcfc3;background:white;padding:12px;color:var(--ink);font:16px "DM Sans",Arial,sans-serif;border-radius:0}textarea{min-height:100px;resize:vertical}input:focus,textarea:focus,select:focus{outline:2px solid #b9c1a9;border-color:var(--g)}.btn{min-height:44px;background:var(--g);color:white;border:1px solid var(--g);padding:12px 17px;font:600 11px "DM Sans",Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}.btn:hover{background:var(--clay);border-color:var(--clay)}.btn.alt{background:transparent;color:var(--g)}.btn.danger{background:#8c392d;border-color:#8c392d}.btn:disabled{opacity:.5;cursor:wait}.actions{display:flex;gap:10px;flex-wrap:wrap;margin-top:16px}.topline{display:flex;align-items:center;justify-content:space-between;gap:15px;flex-wrap:wrap}.product{display:grid;grid-template-columns:90px 1fr auto;gap:15px;align-items:center;border-top:1px solid var(--line);padding:15px 0}.product img,.thumb{width:90px;height:100px;object-fit:cover;background:var(--sage)}.thumb{display:grid;place-items:center;color:var(--g);font:25px "Playfair Display",serif}.product h3{font:20px "Playfair Display",serif;color:var(--g);margin:0 0 4px}.product small{color:var(--muted)}.product-actions{display:flex;gap:7px;flex-wrap:wrap}.product-actions .btn{padding:9px 10px}.hidden{display:none!important}.privacy{background:var(--sage);padding:13px 16px;font-size:12px;color:#4f5d4e;margin-top:18px}.foot{font-size:11px;color:var(--muted);text-align:center;margin-top:35px}a{color:var(--g)}@media(max-width:650px){.panel{padding:18px}.fields{grid-template-columns:1fr}.full{grid-column:auto}.product{grid-template-columns:66px 1fr}.product img,.thumb{width:66px;height:82px}.product-actions{grid-column:2}.head{align-items:flex-start;flex-direction:column}}
@@ -25,7 +25,7 @@
 <div class="field"><label for="price">Preço (R$)</label><input id="price" type="number" min="0" step="0.01" placeholder="Ex.: 49,90"></div>
 <div class="field"><label for="status">Visibilidade</label><select id="status"><option value="available">Disponível</option><option value="soon">Lançamento em breve</option></select></div>
 <div class="field full"><label for="description">Descrição</label><textarea id="description" maxlength="500" placeholder="Conte um pouco sobre a peça."></textarea></div>
-<div class="field full"><label for="image">Foto do produto (JPG, PNG ou WebP)</label><input id="image" type="file" accept="image/jpeg,image/png,image/webp"><small class="hint">Máximo de 12 MB. Ao editar, deixe em branco para manter a foto atual.</small></div>
+<div class="field full"><label for="image">Foto do produto (JPG, PNG ou WebP)</label><input id="image" type="file" accept="image/jpeg,image/png,image/webp"><small class="hint">Máximo de 12 MB por arquivo. A foto será ajustada para até 1200 px e convertida para WebP antes do envio. Ao editar, deixe em branco para manter a foto atual.</small></div>
 </div><div class="actions"><button class="btn" id="save-button" type="submit">Salvar acessório</button><button class="btn alt" id="cancel-edit" type="button">Limpar formulário</button></div><div id="form-message" class="status" role="status"></div></form></div>
 <div class="panel"><div class="topline"><h2>Catálogo cadastrado</h2><button class="btn alt" id="refresh" type="button">Atualizar lista</button></div><div id="list-message" class="status" role="status"></div><div id="product-list"></div></div>
 </section>
@@ -46,11 +46,61 @@ function showDashboard(user){if(!isAdmin(user.email)){client.auth.signOut();mess
 function enterEdit(p){$('product-id').value=p.id;$('name').value=p.name||'';$('category').value=p.category||'Acessório autoral';$('price').value=p.price==null?'':p.price;$('status').value=p.status||'available';$('description').value=p.description||'';$('image').value='';$('form-title').textContent='Editar acessório';$('save-button').textContent='Salvar alterações';message('form-message','');window.scrollTo({top:0,behavior:'smooth'})}
 function renderList(){var el=$('product-list');if(!products.length){el.innerHTML='<p class="hint">Nenhum acessório cadastrado ainda.</p>';return}el.innerHTML=products.map(function(p){var img=p.image_url?'<img src="'+esc(p.image_url)+'" alt="">':'<div class="thumb">K</div>';return '<article class="product">'+img+'<div><h3>'+esc(p.name)+'</h3><small>'+esc(p.category||'Acessório autoral')+' · '+(p.status==='soon'?'Em breve':money(p.price))+'</small></div><div class="product-actions"><button class="btn alt" data-edit="'+esc(p.id)+'" type="button">Editar</button><button class="btn danger" data-delete="'+esc(p.id)+'" type="button">Excluir</button></div></article>'}).join('')}
 async function loadProducts(){message('list-message','Carregando…');var r=await client.from('products').select('*').order('created_at',{ascending:false});if(r.error){message('list-message','Não foi possível carregar a lista: '+r.error.message,true);return}products=r.data||[];renderList();message('list-message',products.length+' acessório(s) no catálogo.')}
-async function uploadPhoto(file){if(!file)return null;if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw new Error('Escolha uma imagem JPG, PNG ou WebP.');if(file.size>12*1024*1024)throw new Error('A imagem deve ter no máximo 12 MB.');var ext=file.type==='image/png'?'png':file.type==='image/webp'?'webp':'jpg';var path=Date.now()+'-'+Math.random().toString(36).slice(2)+'.'+ext;var result=await client.storage.from('product-images').upload(path,file,{upsert:false,contentType:file.type});if(result.error)throw result.error;return client.storage.from('product-images').getPublicUrl(path).data.publicUrl}
+async function decodeImageFile(file){
+ if(window.createImageBitmap){
+  try{return await window.createImageBitmap(file)}catch(e){}
+ }
+ return await new Promise(function(resolve,reject){
+  var url=URL.createObjectURL(file),img=new Image();
+  img.onload=function(){URL.revokeObjectURL(url);resolve(img)};
+  img.onerror=function(){URL.revokeObjectURL(url);reject(new Error('Não foi possível abrir esta imagem. Tente outro arquivo.'))};
+  img.src=url;
+ });
+}
+function canvasToBlob(canvas,type,quality){
+ return new Promise(function(resolve){canvas.toBlob(resolve,type,quality)});
+}
+async function optimizePhoto(file){
+ var image=await decodeImageFile(file);
+ try{
+  var originalWidth=image.width||image.naturalWidth,originalHeight=image.height||image.naturalHeight;
+  if(!originalWidth||!originalHeight)throw new Error('A imagem selecionada é inválida.');
+  var scale=Math.min(1,1200/Math.max(originalWidth,originalHeight));
+  var canvas=document.createElement('canvas');
+  canvas.width=Math.max(1,Math.round(originalWidth*scale));
+  canvas.height=Math.max(1,Math.round(originalHeight*scale));
+  var context=canvas.getContext('2d');
+  if(!context)throw new Error('Seu navegador não conseguiu preparar a imagem.');
+  context.imageSmoothingEnabled=true;
+  context.imageSmoothingQuality='high';
+  context.drawImage(image,0,0,canvas.width,canvas.height);
+  var blob=await canvasToBlob(canvas,'image/webp',0.82);
+  if(!blob||blob.type!=='image/webp'){
+   var fallbackType=file.type==='image/png'?'image/png':'image/jpeg';
+   blob=await canvasToBlob(canvas,fallbackType,fallbackType==='image/jpeg'?0.86:undefined);
+  }
+  if(!blob)throw new Error('Não foi possível comprimir esta foto. Tente outra imagem.');
+  var extension=blob.type==='image/webp'?'webp':blob.type==='image/png'?'png':'jpg';
+  return new File([blob],'produto-otimizado.'+extension,{type:blob.type,lastModified:Date.now()});
+ }finally{
+  if(image&&typeof image.close==='function')image.close();
+ }
+}
+async function uploadPhoto(file){
+ if(!file)return null;
+ if(!['image/jpeg','image/png','image/webp'].includes(file.type))throw new Error('Escolha uma imagem JPG, PNG ou WebP.');
+ if(file.size>12*1024*1024)throw new Error('A imagem original deve ter no máximo 12 MB.');
+ var optimized=await optimizePhoto(file);
+ var ext=optimized.type==='image/webp'?'webp':optimized.type==='image/png'?'png':'jpg';
+ var path=Date.now()+'-'+Math.random().toString(36).slice(2)+'.'+ext;
+ var result=await client.storage.from('product-images').upload(path,optimized,{upsert:false,contentType:optimized.type});
+ if(result.error)throw result.error;
+ return client.storage.from('product-images').getPublicUrl(path).data.publicUrl;
+}
 $('login-form').addEventListener('submit',async function(e){e.preventDefault();if(!client)return;var b=$('login-button');b.disabled=true;message('login-message','Verificando acesso…');var r=await client.auth.signInWithPassword({email:$('email').value.trim(),password:$('password').value});b.disabled=false;if(r.error){message('login-message','Falha no login: '+(r.error.message||r.error.code||'Confira o e-mail, a senha e a confirmação da conta.'),true);return}if(!isAdmin(r.data.user.email)){await client.auth.signOut();message('login-message','Este e-mail não tem permissão para administrar.',true);return}message('login-message','');showDashboard(r.data.user)});
 $('logout').addEventListener('click',async function(){await client.auth.signOut();$('dashboard').classList.add('hidden');$('login-panel').classList.remove('hidden');resetForm();message('login-message','Você saiu do painel.')});
 $('cancel-edit').addEventListener('click',resetForm);$('refresh').addEventListener('click',loadProducts);
-$('product-form').addEventListener('submit',async function(e){e.preventDefault();var btn=$('save-button');btn.disabled=true;message('form-message','Salvando…');try{var id=$('product-id').value||null, photo=await uploadPhoto($('image').files[0]);var payload={name:$('name').value.trim(),category:$('category').value.trim()||'Acessório autoral',price:$('price').value===''?null:Number($('price').value),status:$('status').value,description:$('description').value.trim(),updated_at:new Date().toISOString()};if(id)payload.id=id;if(photo)payload.image_url=photo;var r=await client.from('products').upsert(payload).select().single();if(r.error)throw r.error;resetForm();message('form-message','Acessório salvo com sucesso.');await loadProducts()}catch(err){message('form-message','Erro ao salvar: '+(err.message||'verifique a configuração e as permissões.'),true)}finally{btn.disabled=false}});
+$('product-form').addEventListener('submit',async function(e){e.preventDefault();var btn=$('save-button');btn.disabled=true;message('form-message',$('image').files[0]?'Otimizando foto e salvando…':'Salvando…');try{var id=$('product-id').value||null, photo=await uploadPhoto($('image').files[0]);var payload={name:$('name').value.trim(),category:$('category').value.trim()||'Acessório autoral',price:$('price').value===''?null:Number($('price').value),status:$('status').value,description:$('description').value.trim(),updated_at:new Date().toISOString()};if(id)payload.id=id;if(photo)payload.image_url=photo;var r=await client.from('products').upsert(payload).select().single();if(r.error)throw r.error;resetForm();message('form-message','Acessório salvo com sucesso.');await loadProducts()}catch(err){message('form-message','Erro ao salvar: '+(err.message||'verifique a configuração e as permissões.'),true)}finally{btn.disabled=false}});
 $('product-list').addEventListener('click',async function(e){var edit=e.target.closest('[data-edit]'), del=e.target.closest('[data-delete]');if(edit){var p=products.find(function(x){return x.id===edit.dataset.edit});if(p)enterEdit(p);return}if(del){var p=products.find(function(x){return x.id===del.dataset.delete});if(!p||!confirm('Excluir “'+p.name+'” do catálogo?'))return;del.disabled=true;var r=await client.from('products').delete().eq('id',p.id);if(r.error){message('list-message','Não foi possível excluir: '+r.error.message,true);del.disabled=false;return}products=products.filter(function(x){return x.id!==p.id});renderList();message('list-message','Acessório removido.')}});
 async function init(){if(!configured()){$('config-warning').classList.remove('hidden');$('login-panel').classList.add('hidden');return}client=window.supabase.createClient(cfg.SUPABASE_URL,cfg.SUPABASE_ANON_KEY);var r=await client.auth.getSession();if(r.data&&r.data.session){if(isAdmin(r.data.session.user.email))showDashboard(r.data.session.user);else await client.auth.signOut()}client.auth.onAuthStateChange(function(event,session){if(event==='SIGNED_IN'&&session&&isAdmin(session.user.email))setTimeout(function(){showDashboard(session.user)},0);if(event==='SIGNED_OUT'){$('dashboard').classList.add('hidden');$('login-panel').classList.remove('hidden')}})}
 init();
